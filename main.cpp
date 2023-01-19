@@ -43,10 +43,8 @@ int main(void)
     int black[] = {0, 0, 0};
 
     int i{0};
-    while (1)
+    while (!(SDL_PollEvent(&event) && event.type == SDL_QUIT))
     {
-        if (SDL_PollEvent(&event) && event.type == SDL_QUIT)
-            break;
 
         life->render(white, black, PIXEL_WIDTH, WINDOW_WIDTH, renderer);
 
