@@ -122,10 +122,8 @@ private:
     int height;
     Board currentGen;
 
-    /* Implementation:
-    Toridal space.
-    Must check all von nueman neighbors. (i + 1, i - 1, j + 1, j - 1)
-    If i or j == 0 or .size() 0 1, set = to size() - 1 or 0.
+    /*
+    Uses Toridal space.
     */
 
     // I don't like this code, it's ugly.
